@@ -413,7 +413,7 @@ module.exports = module.exports.toString();
 /***/ "./src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<h1>Home Page</h1>\r\n<p *ngIf=\"authService.isLoggedIn()\">\r\n  Welcome {{ authService.currentUser.name }}\r\n</p>\r\n<ul>\r\n<<<<<<< HEAD\r\n  <li *ngIf=\"authService.isLoggedIn()\"><a routerLink=\"/admin\">Admin</a></li>\r\n  <li><a routerLink=\"/login\">Login</a></li>\r\n=======\r\n  <li *ngIf=\"authService.isLoggedIn() && authService.currentUser.admin\"><a routerLink=\"/admin\" [queryParams]=\"{ 'returnUrl':'admin' }\">Admin</a></li>\r\n  <li *ngIf=\"!authService.isLoggedIn()\"><a routerLink=\"/login\">Login</a></li>\r\n>>>>>>> df1d91b9832a2755019677c9ee3fcd1092de4700\r\n  <li *ngIf=\"authService.isLoggedIn()\"><a (click)=\"authService.logout()\">Logout</a></li>\r\n</ul>"
+module.exports = "\r\n<h1>Home Page</h1>\r\n<p *ngIf=\"authService.isLoggedIn()\">\r\n  Welcome {{ authService.currentUser.name }}\r\n</p>\r\n<ul>\r\n  <li *ngIf=\"authService.isLoggedIn() && authService.currentUser.admin\"><a routerLink=\"/admin\" [queryParams]=\"{ 'returnUrl':'admin' }\">Admin</a></li>\r\n  <li *ngIf=\"!authService.isLoggedIn()\"><a routerLink=\"/login\">Login</a></li>\r\n  <li *ngIf=\"authService.isLoggedIn()\"><a (click)=\"authService.logout()\">Logout</a></li>\r\n</ul>"
 
 /***/ }),
 
