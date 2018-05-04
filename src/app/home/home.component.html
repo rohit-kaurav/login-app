@@ -4,7 +4,12 @@
   Welcome {{ authService.currentUser.name }}
 </p>
 <ul>
+<<<<<<< HEAD
   <li *ngIf="authService.isLoggedIn()"><a routerLink="/admin">Admin</a></li>
   <li><a routerLink="/login">Login</a></li>
+=======
+  <li *ngIf="authService.isLoggedIn() && authService.currentUser.admin"><a routerLink="/admin" [queryParams]="{ 'returnUrl':'admin' }">Admin</a></li>
+  <li *ngIf="!authService.isLoggedIn()"><a routerLink="/login">Login</a></li>
+>>>>>>> df1d91b9832a2755019677c9ee3fcd1092de4700
   <li *ngIf="authService.isLoggedIn()"><a (click)="authService.logout()">Logout</a></li>
 </ul>
