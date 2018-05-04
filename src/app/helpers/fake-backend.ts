@@ -3,11 +3,7 @@ import { MockBackend, MockConnection } from '@angular/http/testing';
  
 export function fakeBackendFactory(backend: MockBackend, options: BaseRequestOptions) {
 
-<<<<<<< HEAD
-    let token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6Ik1vc2ggSGFtZWRhbmkiLCJhZG1pbiI6dHJ1ZX0.iy8az1ZDe-_hS8GLDKsQKgPHvWpHl0zkQBqy1QIPOkA';
-=======
     let token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IlJvaGl0IiwiYWRtaW4iOnRydWV9.kfnbnzLyo7ZqlLM42qMyRALYsPEfZyZW0SAjOKQHomI';
->>>>>>> df1d91b9832a2755019677c9ee3fcd1092de4700
 
     backend.connections.subscribe((connection: MockConnection) => {
       // We are using the setTimeout() function to simulate an asynchronous call 
@@ -20,11 +16,7 @@ export function fakeBackendFactory(backend: MockBackend, options: BaseRequestOpt
             connection.request.method === RequestMethod.Post) {
             let body = JSON.parse(connection.request.getBody());
 
-<<<<<<< HEAD
-            if (body.email === 'mosh@domain.com' && body.password === '1234') {
-=======
             if (body.email === 'rohit@domain.com' && body.password === '1234') {
->>>>>>> df1d91b9832a2755019677c9ee3fcd1092de4700
               connection.mockRespond(new Response(
                 new ResponseOptions({ 
                   status: 200, 
@@ -57,11 +49,7 @@ export function fakeBackendFactory(backend: MockBackend, options: BaseRequestOpt
           
         
 
-<<<<<<< HEAD
-      }, 1000);
-=======
       }, 1);
->>>>>>> df1d91b9832a2755019677c9ee3fcd1092de4700
     });
  
     return new Http(backend, options);
